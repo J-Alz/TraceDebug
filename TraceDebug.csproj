@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <Authors>J-Alz</Authors>
+    <Description>Es una librería encargada de generar archivos con el contenido de variables, facilitando su análisis y permitiendo realizar print debugging de forma más sencilla.</Description>
+
+    <RepositoryUrl>https://github.com/J-Alz/TraceDebug.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DEBUG\**" />
+    <EmbeddedResource Remove="DEBUG\**" />
+    <None Remove="DEBUG\**" />
+
+    <None Update="README.md" Pack="true" PackagePath="\" />
+    <None Update="LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

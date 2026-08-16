@@ -1,0 +1,51 @@
+# Archivos de compilación
+bin/
+obj/
+Properties/PublishProfiles/
+
+# Archivos de dependencias y paquetes
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# Archivos de configuración específicos de usuario y sistema
+.vscode/
+.vs/
+*.user
+*.suo
+
+# Archivos de log y seguimiento de rendimiento
+*.log
+*.tlg
+*.ide.log
+
+# Archivos de configuración local
+*.env
+
+# Archivos de base de datos local
+*.mdf
+*.ldf
+
+# Archivos de migraciones de Entity Framework
+Migrations/
+
+# Archivos de configuración de IIS
+*.vspscc
+*.vssscc
+
+# Archivos generados por NuGet
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+.nuget/
+
+# Archivos de configuración de OS (Windows, macOS, Linux)
+.DS_Store
+Thumbs.db
+
+# Archivos de publicación
+publish/
+
+# Archivos de documentacion no necesaria
+~$*

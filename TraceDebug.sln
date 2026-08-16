@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceDebug", "TraceDebug.csproj", "{74DB0B55-E6FB-47AC-B59A-8DF108F6A862}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74DB0B55-E6FB-47AC-B59A-8DF108F6A862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DB0B55-E6FB-47AC-B59A-8DF108F6A862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DB0B55-E6FB-47AC-B59A-8DF108F6A862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DB0B55-E6FB-47AC-B59A-8DF108F6A862}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0D4DB99-C9E4-47FB-AD57-8A481C9F1C38}
+	EndGlobalSection
+EndGlobal
