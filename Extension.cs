@@ -28,114 +28,114 @@ namespace TraceDebug
         }
 
         //Data
-        public static void TraceRows(this DataRow[] rows, bool reset = false)
+        public static void TraceRows(this DataRow[] rows, bool reset = true)
         {
             string content = new Core().TraceRows(rows);
             CreateDocument("data.txt",content,reset);
         } 
 
-        public static void TraceRow(this DataRow row, bool reset = false)
+        public static void TraceRow(this DataRow row, bool reset = true)
         {
             string content = new Core().TraceRow(row);
             CreateDocument("data.txt", content, reset);
         } 
 
-        public static void TraceTable(this DataTable dt, bool reset = false)
+        public static void TraceTable(this DataTable dt, bool reset = true)
         {
             string content = new Core().TraceTable(dt);
             CreateDocument("data.txt", content, reset);
         } 
 
-        public static void TraceSet(this DataSet ds,bool reset = false)
+        public static void TraceSet(this DataSet ds,bool reset = true)
         {
             string content = new Core().TraceSet(ds);
             CreateDocument("data.txt", content, reset);
         }
 
-        public static void TraceReader(this IDataReader dr,bool reset = false)
+        public static void TraceReader(this IDataReader dr,bool reset = true)
         {
             string content = new Core().TraceReader(dr);
             CreateDocument("data.txt", content, reset);
         } 
 
         //Exception
-        public static void TraceException(this Exception e,bool reset = false)
+        public static void TraceException(this Exception e,bool reset = true)
         {
             string content = new Core().TraceException(e);
             CreateDocument("exception.txt", content, reset);
         } 
 
         //Types
-        public static void TraceString(this string str,bool reset = false)
+        public static void TraceString(this string str,bool reset = true)
         {
             string content = new Core().TraceLines(str);
             CreateDocument("types.txt", content, reset);
         } 
 
-        public static void TraceChars(this string str,bool reset = false)
+        public static void TraceChars(this string str,bool reset = true)
         {
             string content = new Core().TraceChars(str);
             CreateDocument("types.txt", content, reset);
         } 
 
-        public static void TraceBytes(this byte[] bytes,bool reset = false)
+        public static void TraceBytes(this byte[] bytes,bool reset = true)
         {
             string content = new Core().TraceBytes(bytes);
             CreateDocument("types.txt", content, reset);
         } 
 
-        public static void TraceSizeBytes(this object obj,bool reset = false)
+        public static void TraceSizeBytes(this object obj,bool reset = true)
         {
             string content = new Core().TraceSizeBytes(obj);
             CreateDocument("types.txt", content, reset);
         } 
 
         //Collections
-        public static void TraceArray(this object[] array,bool reset = false)
+        public static void TraceArray(this object[] array,bool reset = true)
         {
             string content = new Core().TraceArray(array);
             CreateDocument("collections.txt", content, reset);
         }
 
-        public static void TraceListT<T>(List<T> list, bool reset = false) where T : class
+        public static void TraceListT<T>(List<T> list, bool reset = true) where T : class
         {
             string content = new Core().TraceList(list);
             CreateDocument("collections.txt", content, reset);
         }
 
-        public static void TraceListObject(List<object> list,bool reset = false)
+        public static void TraceListObject(List<object> list,bool reset = true)
         {
             string content = new Core().TraceList(list);
             CreateDocument("collections.txt", content, reset);
         }
 
-        public static void TraceListString(List<string> list,bool reset = false)
+        public static void TraceListString(List<string> list,bool reset = true)
         {
             string content = new Core().TraceList(list);
             CreateDocument("collections.txt", content, reset);
         }
 
         //XML
-        public static void TraceXml<T>(T obj,bool reset = false)
+        public static void TraceXml<T>(T obj,bool reset = true)
         {
             string content = new Core().TraceXml(obj);
             CreateDocument("result.xml", content, reset);
         }
 
-        public static void TraceXml<T>(T Tclass, bool reset = false,bool indent = false, bool omit_declaration = true)
+        public static void TraceXml<T>(T Tclass, bool reset = true,bool indent = false, bool omit_declaration = true)
         {
             string content = new Core().TraceXml(Tclass,indent,omit_declaration);
             CreateDocument("result.xml", content, reset);
         }
 
         //Models
-        public static void TraceModelList<T>(this List<T> list,bool reset = false)
+        public static void TraceModelList<T>(this List<T> list,bool reset = true)
         {
             string content = new Core().DumpLineList(list.Select(x => (object)x).ToList());
             CreateDocument("models.txt", content, reset);
         }
 
-        public static void TraceModel(this object model,bool reset = false)
+        public static void TraceModel(this object model,bool reset = true)
         {
             string content = new Core().DumpObj(model);
             CreateDocument("models.txt", content, reset);

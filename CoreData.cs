@@ -14,7 +14,7 @@ namespace TraceDebug
 
         public string TraceRow(DataRow row, string name = null)
         {
-            StringBuilder sb = new StringBuilder($"-----ROW {name} -----");
+            StringBuilder sb = new StringBuilder($"-----ROW {name} -----\n");
 
             Dictionary<DataColumn, int> lengths = new Dictionary<DataColumn, int>();
             foreach (DataColumn col in row.Table.Columns)
@@ -43,7 +43,7 @@ namespace TraceDebug
 
         public string TraceRows(DataRow[] rows, string name = null)
         {
-            StringBuilder sb = new StringBuilder($"-----ROW {name} -----");
+            StringBuilder sb = new StringBuilder($"-----ROW {name} -----\n");
             Dictionary<DataColumn, int> lengths = new Dictionary<DataColumn, int>();
             DataRow row = rows[0];
             foreach (DataColumn col in row.Table.Columns)
@@ -71,7 +71,7 @@ namespace TraceDebug
 
         public string TraceTable(DataTable dt, string name = null)
         {
-            StringBuilder sb = new StringBuilder($"----- TABLE {name} -----");
+            StringBuilder sb = new StringBuilder($"----- TABLE {name} -----\n");
 
             if (dt.Rows.Count == 0)
             {
@@ -116,7 +116,7 @@ namespace TraceDebug
 
         public string TraceSet(DataSet ds)
         {
-            StringBuilder sb = new StringBuilder("----- DATASET -----");
+            StringBuilder sb = new StringBuilder("----- DATASET -----\n");
             foreach (DataTable dt in ds.Tables)
             {
                 sb.AppendLine($"----- TABLE {dt.TableName} -----");
